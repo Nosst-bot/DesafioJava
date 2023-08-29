@@ -1,5 +1,7 @@
 package DesafioGrupo6;
 
+import java.util.Scanner;
+
 public class Persona {
     //Atributos
     String nombre;
@@ -40,5 +42,28 @@ public class Persona {
     }
     public void comer(){
         System.out.println("Esta persona está comiendo");
+    }
+
+    public static Persona crearPersonaDesdeScanner(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa el nombre");
+        String nombre = scanner.nextLine();
+
+        System.out.println("Ingresa el apellido");
+        String apellido = scanner.nextLine();
+
+        System.out.println("Ingresa la edad");
+        Integer edad = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("Ingresa el rut");
+        String rut = scanner.nextLine();
+
+        System.out.println("Ingresa la nacionalidad");
+        String nacionalidad = scanner.nextLine();
+
+        System.out.println("Ingresa la altura");
+        Double altura = Double.parseDouble(scanner.nextLine());
+
+        return new Persona(nombre, apellido, edad, rut, nacionalidad, altura);
     }
 }
