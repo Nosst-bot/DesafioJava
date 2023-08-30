@@ -5,7 +5,7 @@ public class Trabajador extends Persona{
     Double sueldo;
     String lugarDeTrabajo;
 
-    public Trabajador(String nombre, String apellido, Integer edad, String rut, String nacionalidad, Double altura, String oficio, String sueldo, String lugarDeTrabajo) {
+    public Trabajador(String nombre, String apellido, Integer edad, String rut, String nacionalidad, Double altura, String oficio, Double sueldo, String lugarDeTrabajo) {
         super(nombre, apellido, edad, rut, nacionalidad, altura);
         this.oficio = oficio;
         this.sueldo = Double.valueOf(sueldo);

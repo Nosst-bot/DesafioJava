@@ -1,16 +1,30 @@
 package DesafioGrupo6;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int opciones;
+        ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
+        ArrayList<Trabajador> listaTrabajadores = new ArrayList<>();
 
-        System.out.println("Hola, bienvenido. Define una opción");
-        System.out.println("\nOpción 1 para estudiante.");
-        System.out.println("\nOpción 2 para trabajador.");
-        System.out.println("\nOpción 3 para salir.");
-        opciones = scanner.nextInt();
+        Persona persona = Persona.crearPersonaDesdeScanner();
 
+        if (persona instanceof Estudiante) {
+            listaEstudiantes.add((Estudiante) persona);
+
+        }
+        if (persona instanceof Trabajador) {
+            listaTrabajadores.add((Trabajador) persona);
+        }
+
+        for (Estudiante estudiante :
+                listaEstudiantes) {
+            System.out.println(estudiante);
+        }
+
+        for (Trabajador trabajador :
+                listaTrabajadores) {
+            System.out.println(trabajador);
+        }
     }
 
 }
